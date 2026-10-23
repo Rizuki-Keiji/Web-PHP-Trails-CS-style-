@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400..700;1,400..700&display=swap');
+
+:root {
+    /* Cold Steel 1 - ARCUS I Silver & Gunmetal Palette */
+    --arcus-silver-bg: #22262d;
+    --arcus-silver-panel: #2b303a;
+    --arcus-silver-surface: #383f4c;
+    --arcus-metal-edge: #576275;
+    --arcus-metal-light: #8e9bb0;
+
+    /* Thors Academy Brass / Amber Accents */
+    --orbal-brass-gold: #c99a45;
+    --orbal-brass-light: #ecd18a;
+    --orbal-quartz-glow: #b4b4b4;
+
+    /* Text Colors */
+    --arcus-text-main: #f0f3f7;
+    --arcus-text-sub: #b2becd;
+
+    /* Text Fonts */
+    --font-heading: 'Copperplate Gothic Bold', 'Copperplate Gothic', 'Copperplate', 'Cinzel', serif;
+    --font-body: 'Cuprum', sans-serif;
+}
+
+body {
+    background-color: var(--arcus-silver-bg) !important;
+    color: var(--arcus-text-main) !important;
+    font-family: var(--font-body) !important;
+    font-size: 1.05rem;
+    letter-spacing: 0.4px;
+    background-image:
+        radial-gradient(ellipse at 50% 0%, rgba(201, 154, 69, 0.08) 0%, transparent 60%),
+        linear-gradient(rgba(87, 98, 117, 0.22) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(87, 98, 117, 0.22) 1px, transparent 1px);
+    background-size: 100% 100%, 32px 32px, 32px 32px;
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6, .card-header {
+    font-family: var(--font-heading) !important;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    font-weight: 700;
+}
+
+h3 {
+    color: var(--orbal-brass-gold) !important;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+hr {
+    border-top: 1px solid var(--orbal-brass-gold) !important;
+    opacity: 0.55;
+}
+
+/* ARCUS I Silver */
+.card {
+    background-color: var(--arcus-silver-panel) !important;
+    border: 1px solid var(--arcus-metal-edge) !important;
+    clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.card-header {
+    background: linear-gradient(90deg, #3d4654 0%, #2b303a 100%) !important;
+    border-bottom: 2px solid var(--orbal-brass-gold) !important;
+    color: var(--orbal-brass-light) !important;
+    font-size: 1.15rem;
+    padding: 12px 20px;
+}
+
+/* Cold Steel 1 Style Table */
+.table {
+    font-family: var(--font-body) !important;
+    color: var(--arcus-text-main) !important;
+    border-color: var(--arcus-metal-edge) !important;
+}
+
+.table thead th {
+    font-family: var(--font-heading) !important;
+    background: #1f232b !important;
+    color: var(--orbal-brass-light) !important;
+    border-bottom: 2px solid var(--orbal-brass-gold) !important;
+    border-top: none;
+    letter-spacing: 1.2px;
+    font-size: 0.95rem;
+}
+
+.table tbody tr {
+    background-color: rgba(43, 48, 58, 0.7);
+    transition: background-color 0.15s ease;
+}
+
+.table tbody tr:hover {
+    background-color: var(--arcus-silver-surface) !important;
+    box-shadow: inset 3px 0 0 var(--orbal-brass-gold);
+}
+
+.table td, .table th {
+    border-color: rgba(87, 98, 117, 0.45) !important;
+    vertical-align: middle;
+}
+
+/* Form Controls & Inputs */
+label {
+    font-family: var(--font-heading) !important;
+    color: var(--orbal-brass-light);
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.form-control {
+    background-color: #1a1e24 !important;
+    border: 1px solid var(--arcus-metal-edge) !important;
+    color: #ffffff !important;
+    font-family: var(--font-body) !important;
+    font-size: 1.05rem;
+    border-radius: 0px !important;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-control:focus {
+    border-color: var(--orbal-quartz-glow) !important;
+    box-shadow: 0 0 10px rgba(213, 213, 213, 0.3) !important;
+}
+
+select.form-control option {
+    background-color: #22262d;
+    color: #ffffff;
+}
+
+/* Action Buttons */
+.btn {
+    font-family: var(--font-heading) !important;
+    border-radius: 0px !important;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-size: 0.85rem;
+    clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
+    padding: 6px 18px;
+    transition: all 0.2s ease;
+}
+
+/* Thors Academy Crimson/Gold Primary */
+.btn-success, .btn-primary {
+    background: linear-gradient(135deg, #b5893a, #e2be6c) !important;
+    border: 1px solid var(--orbal-brass-light) !important;
+    color: #1a1e24 !important;
+    font-weight: 700;
+}
+
+.btn-success:hover, .btn-primary:hover {
+    background: linear-gradient(135deg, #c99a45, #f3db98) !important;
+    box-shadow: 0 0 12px rgba(201, 154, 69, 0.55);
+    transform: translateY(-1px);
+}
+
+.btn-dark {
+    background-color: #383f4c !important;
+    border: 1px solid var(--arcus-metal-light) !important;
+    color: #ffffff !important;
+}
+
+.btn-dark:hover {
+    background-color: #464f5f !important;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
+}
+
+.btn-secondary {
+    background-color: #4a5463 !important;
+    border: 1px solid var(--arcus-metal-edge) !important;
+    color: #ffffff !important;
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #822222, #b83232) !important;
+    border: 1px solid #d45b5b !important;
+    color: #ffffff !important;
+}
+
+.btn-danger:hover {
+    box-shadow: 0 0 12px rgba(184, 50, 50, 0.55);
+}
+
+/* Pagination Control */
+.pagination {
+    margin-top: 15px;
+    justify-content: center;
+}
+
+.pagination .page-link {
+    background-color: #2b303a;
+    border-color: var(--arcus-metal-edge);
+    color: var(--orbal-brass-light);
+    font-family: var(--font-heading);
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--orbal-brass-gold);
+    border-color: var(--orbal-brass-light);
+    color: #1a1e24;
+}
+
+.pagination .page-item.disabled .page-link {
+    background-color: #1a1e24;
+    border-color: var(--arcus-metal-edge);
+    color: var(--arcus-metal-edge);
+}
+
+nav[role="navigation"] svg {
+    width: 16px !important;
+    height: 16px !important;
+}
+
+nav[role="navigation"] .text-sm {
+    color: var(--arcus-text-sub) !important;
+    font-family: var(--font-body) !important;
+    font-size: 0.95rem !important;
+    margin-bottom: 8px;
+}
